@@ -4,14 +4,14 @@ import { createWebHistory, createRouter } from "vue-router";
 const routes =  [
     {
         path: "/",
-        alias: "/charaters",
-        name: "charaters",
-        component: () => import("./components/CharacterList.vue")
+        alias: "/characters",
+        name: "characters",
+        component: () => import("./components/2-connected/CharacterBank/Characters.vue")
     },
     {
         path: "/add",
         name: "add",
-        component: () => import("./components/AddCharacter.vue")
+        component: () => import("./components/2-connected/CharacterBank/AddCharacter.vue")
     }
     ];
     
