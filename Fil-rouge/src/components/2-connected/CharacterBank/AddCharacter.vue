@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<input v-model="value" />
-		<h1>ADD</h1>
+		<h1>ADD character</h1>
 	</div>
 </template>
 

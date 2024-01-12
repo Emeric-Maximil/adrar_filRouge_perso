@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<input v-model="value" />
+		<h1>Abonnement</h1>
 	</div>
 </template>
 
