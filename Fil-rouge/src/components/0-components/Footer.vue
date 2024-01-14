@@ -1,6 +1,7 @@
 <template>
-	<div>
+	<div style="background-color: rgb(230, 230, 230);">
 		<input v-model="value" />
+		<h1>footer</h1>
 	</div>
 </template>
 
