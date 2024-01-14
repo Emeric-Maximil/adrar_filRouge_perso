@@ -7,6 +7,7 @@ Pour installer ce projet, suivez les instructions suivantes :
 
 ## Installez les dépendances :
 npm install
+npm install firebase
 
 ## Lancez le projet :
 npm run dev

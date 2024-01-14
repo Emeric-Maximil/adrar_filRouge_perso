@@ -15,8 +15,21 @@
 </script>
 
 <template>
+
   <div id="app">
-    <div class="app">
+
+  <header>
+
+    <div style="display: flex;  align-items: center; margin-top: 0%;">
+      <img src="./assets/logo.png" alt="image jeu de role" style="width: 20%; height: 20%; margin-left: 0%;" >
+      <h1 style="margin: auto;">ROLE A DICE</h1>
+      <router-link to="/account" style="margin-left: auto;">Votre compte</router-link>
+    </div>
+
+  </header>
+  
+
+    <div class="app" >
       <nav>
         <router-link to="/" class="underlined"><a href="#"> Accueil </a></router-link>
         |
@@ -30,6 +43,9 @@
 
         <router-view />
       </nav>
+      
     </div>
+    <div class="separator"></div>
   </div>
+  
 </template>
