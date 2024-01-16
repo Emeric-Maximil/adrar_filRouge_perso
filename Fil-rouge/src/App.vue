@@ -55,7 +55,12 @@
 </template>
 
 <script>
+import footerComponent from "./components/0-components/Footer.vue"
+
  export default{
+  components:{
+    'footer-component':footerComponent,
+  },
   data(){
     return{
       selectedIdx: 0,
