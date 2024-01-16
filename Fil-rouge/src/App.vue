@@ -28,7 +28,7 @@
        @click="selectedIndex(1)"
         ><a href="#"> Liste des parties  </a></router-link>
         |
-        <router-link to="/characters"
+        <router-link to="/characters" 
         :class="{ underlined: selectedIdx == 2 ? true:false, notUnderlined: selectedIdx !=2? true:false}"
        @click="selectedIndex(2)"
         ><a href="#"> Banque de perso  </a></router-link>
