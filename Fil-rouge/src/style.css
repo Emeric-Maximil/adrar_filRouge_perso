@@ -77,7 +77,7 @@ button:hover {
 }
 
 .desktop{
-  display: flex;
+  display: block;
 }
 
 #app {
@@ -92,12 +92,12 @@ button:hover {
   margin-top: 20px;
 }
 
-
-@media screen and (max-width:700px) {
+/*when the screen width is equal or inferior of 600px the desktop class items disapear*/
+@media screen and (max-width:600px) {
   .desktop{
       display: none;
   }
   .mobile{
-    display: flex;
+    display:block;
   }
 }
