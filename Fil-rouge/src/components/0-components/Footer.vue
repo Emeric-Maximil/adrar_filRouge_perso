@@ -1,11 +1,12 @@
 <template>
-	<div style="background-color: rgb(230, 230, 230);">
-		<input v-model="value" />
-		<h1>footer</h1>
-	</div>
+    <div style="background-color: rgb(230, 230, 230); display: flex; align-items: center; margin-top: 0%">
+		
+        
+        <h1 style="margin: auto;">footer1</h1><h1 style="margin: auto;">footer2</h1><h1 style="margin: auto;">footer3</h1>
+    </div>
 </template>
 
-<script lang='js'>
+<script lang="js">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -59,5 +60,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="css">
-</style>
+<style scoped lang="css"></style>
