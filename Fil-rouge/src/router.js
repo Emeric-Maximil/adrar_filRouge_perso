@@ -69,7 +69,13 @@ const routes =  [
         path: "/other",
         name: "other",
         component: () => import("./components/2-connected/Account/Account.vue")
-    }]
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "error404",
+        component: () => import("./components/0-components/Error404.vue")
+    }
+    ]
  
     const router = createRouter({
     history: createWebHistory(),
