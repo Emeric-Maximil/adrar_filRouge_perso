@@ -1,12 +1,18 @@
 <template>
 	<div>
-		<input v-model="value" />
+		
 		<h1>CHARACTERS</h1>
+
+
 	</div>
 </template>
 
 <script lang='js'>
 import { defineComponent } from 'vue'
+
+import character from "./Character.vue"
+
+
 
 export default defineComponent({
 	name: 'Characters',

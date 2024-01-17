@@ -9,10 +9,10 @@
             <img
                 src="../../assets/logo.png"
                 alt="image jeu de role"
-                style="width: 20%; height: 20%; margin: auto; margin-left: 0%;"
+                style="width: 10%; height: 10%; margin: auto; margin-left: 0%;"
             />
             <h1 style="margin: auto" class="desktop">ROLE A DICE</h1>
-            <router-link to="/account" style="margin: auto; margin-right: 0%;"
+            <router-link to="/account" style="margin: auto; margin-right: 1%;"
                 >Compte</router-link
             >
         </div>
