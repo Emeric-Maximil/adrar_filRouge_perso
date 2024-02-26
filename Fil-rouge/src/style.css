@@ -1,5 +1,4 @@
 :root {
-  
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,19 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a:any-link,
-a:-webkit-any-link,
-a:-moz-any-link {
-  color: inherit;
-  text-decoration: none;
-}
-
 .router-link-active{
   color: #ba0073;
   text-decoration: underline;  
 }
-
-
 
 a {
   
@@ -37,8 +27,6 @@ a {
 a:hover {
   color: #f80099;
 }
-
-
 
 body {
   margin: 0;
@@ -76,15 +64,12 @@ button:hover {
   padding: 2em;
 }
 
-.desktop{
-  display: block;
-}
 
 #app {
   max-width: 1280px; 
   margin: 0 auto;
-  padding: 2rem;
-   text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .separator {
@@ -92,6 +77,9 @@ button:hover {
   margin-top: 20px;
 }
 
+.desktop{
+  display: block;
+}
 /*when the screen width is equal or inferior of 600px the desktop class items disapear*/
 @media screen and (max-width:600px) {
   .desktop{

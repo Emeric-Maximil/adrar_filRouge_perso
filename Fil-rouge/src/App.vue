@@ -27,19 +27,8 @@
       </nav>
       -->
 
-      <nav>
-        <router-link to="/"> Accueil </router-link>
-        |
-        <router-link to="/parties">Liste des parties </router-link>
-        |
-        <router-link to="/characters"> Banque de perso</router-link>
-        |
-        <router-link to="/subscription">Abonnement</router-link>
-        |
-        <router-link to="/other"> Autres </router-link>
-
-        <router-view />
-      </nav>
+      
+      <router-view />
       
     </div>
     <div class="separator"></div>
