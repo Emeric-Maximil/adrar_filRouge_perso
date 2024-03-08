@@ -1,9 +1,28 @@
 <template>
-    <div style="background-color: rgb(230, 230, 230); display: flex; align-items: center; margin-top: 0%">
-		
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-12 col-md-4">
+			<h3>Conditions d'utilisation</h3>
+			<p>Toutes images peuvent être soumises à des droits d'auteur, restez vigilent.</p>
+		</div>
+
+		<div class="col-12 col-md-4">
+			<h3>Nous contacter</h3>
+			<p style="margin-bottom: 0%;">Tel : 06.12.34.56.78</p>
+			<p style="margin-top: 0%;">Mail : e.mail@mail.me</p>
+		</div>
+
+		<div class="col-12 col-md-4">
+			<h3>FAQ</h3>
+			<p>Vous avez besoin de poser une question ou vous recherchez des réponses ? N'attendez plus !</p>
+		</div>
+	</div>
+</div>
         
-        <h1 style="margin: auto;">footer1</h1><h1 style="margin: auto;">footer2</h1><h1 style="margin: auto;">footer3</h1>
-    </div>
+		
+		
 </template>
 
 <script lang="js">
