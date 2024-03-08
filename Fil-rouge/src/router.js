@@ -48,7 +48,7 @@ const routes =  [
     {
         path: "/sign",
         name: "sign",
-        component: () => import("./components/2-connected/Account/Account.vue")
+        component: () => import("./components/2-notConnected/Sign.vue")
     },
     {
         path: "/contactUs",

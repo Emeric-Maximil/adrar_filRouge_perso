@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<div class="separator"></div>
 			<div style="display: flex;  margin: 20px;">
 				<div id="partie gauche" style="margin-top: -10px; margin-right: 10%; font-size: 0.7em;">
 					<h1>Jouez sans prise de tête, on s'occupe de tout !</h1>

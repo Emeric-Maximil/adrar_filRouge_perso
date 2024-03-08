@@ -11,22 +11,6 @@
   
 
     <div class="app" >
-     <!-- 
-      <nav>
-        <router-link to="/"> <span class="desktop">Accueil </span></router-link>
-        |
-        <router-link to="/parties"> <span class="desktop">Liste des parties</span> </router-link>
-        |
-        <router-link to="/characters"> <span class="desktop">Banque de perso</span>  </router-link>
-        |
-        <router-link to="/subscription"> <span class="desktop">Abonnement</span> </router-link>
-        |
-        <router-link to="/other"> <span class="desktop">Autres </span> </router-link>
-
-        <router-view />
-      </nav>
-      -->
-
       
       <router-view />
       

@@ -12,12 +12,12 @@
                 style="width: 10%; height: 10%; margin: auto; margin-left: 0%;"
             />
             <h1 style="margin: auto" class="desktop">ROLE A DICE</h1>
-            <router-link to="/account" style="margin: auto; margin-right: 1%;"
+            <router-link to="/sign" style="margin: auto; margin-right: 1%;"
                 >Compte</router-link
             >
         </div>
     </div>
-	<nav>
+	<nav class="no-link-styling">
         <router-link to="/"> Accueil </router-link>
         |
         <router-link to="/parties">Liste des parties </router-link>
@@ -29,6 +29,7 @@
         <router-link to="/other"> Autres </router-link>
 
       </nav>
+	  <div class="separator" style="margin-bottom: 1% ;"></div>
 </template>
 
 <script lang="js">

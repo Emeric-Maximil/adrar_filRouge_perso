@@ -1,11 +1,36 @@
 <template>
-	<div>
-		<input v-model="value" />
-		<h1>connecte toi</h1>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div id="Signin" class="col-6">
+        <h1>Connectez vous</h1>
+        <p>
+          <input type="text" placeholder="Email" v-model="email" />
+        </p>
+        <p>
+          <input type="password" placeholder="Password" v-model="password" />
+        </p>
+        <button @click="signIn">Se Connecter</button>
+      </div>
+
+      <div id="register" class="col-6">
+        <h1>Inscrivez vous</h1>
+		<p><input type="text" placeholder="Email" v-model="email" /></p>
+		<p><input type="password" placeholder="Password" v-model="password" /></p>
+		<p><input
+          type="password"
+          placeholder="Password Verify"
+          v-model="passwordVerif"
+        /></p>
+        
+        
+        
+        <button @click="signIn">S'enregistrer</button>
+      </div>
+    </div>
+  </div>
 </template>
 
-<script lang='js'>
+<script lang="js">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -59,5 +84,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="css">
-</style>
+<style scoped lang="css"></style>
