@@ -19,6 +19,7 @@
   </div>
 </template>
 
+
 <script>
 import footerComponent from "./components/0-components/Footer.vue"
 import headerComponent from "./components/0-components/Header.vue"

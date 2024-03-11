@@ -15,15 +15,21 @@
             <router-link to="/sign" style="margin: auto; margin-right: 1%;"
                 >Compte</router-link
             >
-			<router-link to="/connexion" style="margin: auto; margin-right: 1%;"
+			
+			<span v-if="isLoggedIn">
+        		<button @click="signOut">Logout</button>
+      		</span>
+			  <span v-else>
+				<router-link to="/connexion" style="margin: auto; margin-right: 1%;"
                 >connexion test</router-link
             >
 			<router-link to="/inscription" style="margin: auto; margin-right: 1%;"
                 >inscription test</router-link
             >
+			</span>
         </div>
     </div>
-	<nav class="no-link-styling">
+	<nav >
         <router-link to="/"> Accueil </router-link>
         |
         <router-link to="/parties">Liste des parties </router-link>
@@ -36,58 +42,26 @@
 	  <div class="separator" style="margin-bottom: 1% ;"></div>
 </template>
 
-<script lang="js">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-	name: 'Header',
-	components: {
-	},
-	props: {
-		// v-model
-		modelValue: {
-			default: '',
-		},
-	},
-	emits: {
-		// v-model event with validation
-		'update:modelValue': (value) => value !== null,
-	},
-	data() {
-		return {
-		};
-	},
-	computed: {
-		value: {
-			get () {
-				return this.modelValue;
-			},
-			set (value) {
-				this.$emit('update:modelValue', value);
-			},
-		},
-	},
-	watch: {
-		modelValue: {
-			async handler (_newValue, _oldValue) {
-				// do something
-			},
-			immediate: true
-		},
-	},
-	beforeMount() {
-	},
-	mounted() {
-	},
-	updated() {
-	},
-	beforeUnmount() {
-		// stop the wacher on modelValue
-		this.$watch('modelValue', () => {}, {});
-	},
-	methods: {
-	},
-});
+<script setup>
+import { ref } from 'vue' // pour v-if  conditional rendering
+import firebase from 'firebase'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const isLoggedIn = ref(true)
+// runs after firebase is initialized
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+	isLoggedIn.value = true // if we have a user
+	// console.log(isLoggedIn.value);
+  } else {
+	isLoggedIn.value = false // if we do not
+	// console.log(isLoggedIn.value);
+  }
+})
+const signOut = () => {
+  firebase.auth().signOut()
+  router.push('/')
+}
 </script>
 
 <style scoped lang="css"></style>

@@ -1,58 +1,30 @@
 <template>
-	<div class="container-fluid backoffice">
-	  <div class="row">
+	<h1>Créer un compte</h1>
+	<p><input type="text" placeholder="Email" v-model="email" /></p>
+	<p><input type="password" placeholder="Password" v-model="password" /></p>
+	<p><button @click="register">S'inscrire</button></p>
+</template>
 
-		  <h1 >S'inscrire</h1>
-	  </div>
+<script setup>
+import { ref } from 'vue'
+import firebase from 'firebase'
+import { useRouter } from 'vue-router' // import router
+const email = ref('')
+const password = ref('')
+const router = useRouter() // get a reference to our vue router
+const register = () => {
+	firebase
+		.auth() // get the auth api
+		.createUserWithEmailAndPassword(email.value, password.value) // need .value because ref()
+		.then((data) => {
+			console.log('SUPER WELCOME GRO!');
+			router.push('/feed') // redirect to the feed
+		})
+		.catch(error => {
+			console.log(error.code)
+			alert(error.message);
+		});
+}
+</script>
 
-
-	  <form @submit.prevent="register" class="container-fluid row needs-validation" novalidate>
-		<label for="email" class="form-label">Adresse e-mail</label>
-		<input v-model="email" type="email" class="form-control" id="email"
-		  placeholder="Votre adresse e-mail" required>
-
-		<p></p>
-		<div class="container-fluid">
-			<label for="password" class="form-label">Mot de passe</label>
-			<input v-model="password" type="password" class="form-control" id="password"
-			  placeholder="Votre mot de passe" required>
-		</div> 
-		<div class="container-fluid">
-			<label for="confirmpassword" class="form-label">Confirmer Mot de passe</label>
-			<input v-model="confirmpassword" type="password" class="form-control" id="password"
-			  placeholder="Votre mot de passe" required>
-		</div> 
-
-		<p></p>
-		<div class="col-12 btn-envoyer">
-			<button class="btn btn-primary btn-warning" @submit.prevent="register">Valider</button>
-		</div>
-		<p></p>
-		</form>
-		</div>
-
-  </template>
-
-
-  <script setup>
-  import { ref } from 'vue'
-  import firebase from 'firebase'
-  import { useRouter } from 'vue-router' // import router
-  const email = ref('')
-  const password = ref('')
-  const role = ref('')
-  const router = useRouter() // get a reference to our vue router
-  const register = () => {
-    firebase
-      .auth() // get the auth api
-      .createUserWithEmailAndPassword(email.value, password.value) // need .value because ref()
-      .then((data) => {
-        console.log('SUPER WELCOME GRO!');
-        router.push('/validationinscription') // redirect to the feed
-      })
-      .catch(error => {
-        console.log(error.code)
-        alert(error.message);
-      });
-  }
-  </script>
+<style scoped lang="css"></style> 

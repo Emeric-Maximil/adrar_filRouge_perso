@@ -1,57 +1,12 @@
 <template>
-	<div class="backoffice text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" fill="currentColor" class="bi bi-person"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
-                  </svg>
-</div>
-	<div class="container-fluid backoffice">
-	  <div class="row">
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		  <h1 >Se connecter</h1>
-	  </div>
-<p></p>
+	<h1>Connectez vous...</h1>
+	<p><input type="text" placeholder="Email" v-model="email" /></p>
+	<p><input type="password" placeholder="Password" v-model="password" /></p>
+	<p v-if="errMsg">{{ errMsg }}</p>
+	<p><button @click="signIn">Se Connecter</button></p>
+</template>
 
-	  <form @submit.prevent="register" class="container-fluid row needs-validation" novalidate>
-		<label for="email" class="form-label">Adresse e-mail</label>
-		<input v-model="email" type="email" class="form-control" id="email"
-		  placeholder="Votre adresse e-mail" required>
-		<p></p>
-		<p></p>
-		<div class="container-fluid">
-			<label for="password" class="form-label">Mot de passe</label>
-			<input v-model="password" type="password" class="form-control" id="password"
-			  placeholder="Votre mot de passe" required>
-              <p v-if="errMsg">{{ errMsg }}</p>
-		</div> 
-        <p></p> 
-		<p></p>
-		<p></p>
-		<p></p>
-		<div class="col-12 btn-envoyer">
-			<button class="btn btn-primary btn-warning" @click="signIn">Valider</button>
-		</div>
-		<p></p>
-		<p></p>
-		<div class="col-md-12 mb-3">
-			<label for="mdpperdu" class="form-label" id="mdpperdu">Mot de passe perdu?</label>
-		</div>
-		<p></p>
-		<p></p>
-    
-                <RouterLink class="login-link" to="/backoffice"> <h1>Pour s'inscrire, cliquez içi!</h1></RouterLink>
-    
-		<p></p>
-		</form>
-		</div>
-
-  </template>
-
-  <script setup>
+<script setup>
 import { ref } from 'vue'
 import firebase from 'firebase'
 import { useRouter } from 'vue-router' // import router
@@ -65,7 +20,7 @@ const signIn = () => { // we also renamed this method
 		.signInWithEmailAndPassword(email.value, password.value) // THIS LINE CHANGED
 		.then((data) => {
 			console.log('Successfully logged in!');
-			router.push('/') // redirect to the backoffice ou panier user? afinir
+			router.push('/') // redirect to the feed
 		})
 		.catch(error => {
 			switch (error.code) {
@@ -84,5 +39,6 @@ const signIn = () => { // we also renamed this method
 			}
 		});
 }
-
 </script>
+
+<style scoped lang="css"></style>

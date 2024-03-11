@@ -1,18 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 // ! la ƒ° createRouter 
 //* permet à VUE d'instancier une nouvelle instance router
-/**
- * Liste des routes : 
- * - Liste des parties
- * - Banque de perso
- * - Compte
- * - Abonnement
- * - Connexion/Création de compte
- * - Nous contacter 
- * - Page d'aide
- * - DMCA
- * - Autres
- */
+
 
 const routes =  [
     {
