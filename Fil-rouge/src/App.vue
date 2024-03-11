@@ -5,17 +5,14 @@
 
   <div id="app">
 
-
     <header-component></header-component>
-  
-  
 
     <div class="app" >
       
       <router-view />
       
     </div>
-    <div class="separator"></div>
+
 
     <footer-component></footer-component>
   

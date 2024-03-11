@@ -25,11 +25,6 @@ const routes =  [
         name: "characters",
         component: () => import("./components/2-connected/CharacterBank/Characters.vue")
     },
-    // {
-    //     path: "/add",
-    //     name: "add",
-    //     component: () => import("./components/2-connected/CharacterBank/AddCharacter.vue")
-    // },
     {
         path: "/account",
         name: "account",
@@ -40,20 +35,11 @@ const routes =  [
         name: "parties",
         component: () => import("./components/2-connected/partiesList/Parties.vue")
     },
-    {
-        path: "/subscription",
-        name: "subscription",
-        component: () => import("./components/2-notConnected/Subscription/Subscription.vue")
-    },
+
     {
         path: "/sign",
         name: "sign",
         component: () => import("./components/2-notConnected/Sign.vue")
-    },
-    {
-        path: "/contactUs",
-        name: "contactUs",
-        component: () => import("./components/2-connected/Account/Account.vue")
     },
     {
         path: "/help",
@@ -66,10 +52,19 @@ const routes =  [
         component: () => import("./components/2-connected/Account/Account.vue")
     },
     {
+        path: "/connexion",
+        name: "connexion",
+        component: () => import("./components/Connexion.vue")
+    },{
+        path: "/inscription",
+        name: "inscription",
+        component: () => import("./components/inscription.vue")
+    },
+
+    {
         path: "/other",
         name: "other",
-        component: () => import("./components/2-connected/Account/Account.vue")
-    },
+        component: () => import("./components/2-notConnected/Other.vue")    },
     {
         path: "/:pathMatch(.*)*",
         name: "error404",

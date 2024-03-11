@@ -15,6 +15,12 @@
             <router-link to="/sign" style="margin: auto; margin-right: 1%;"
                 >Compte</router-link
             >
+			<router-link to="/connexion" style="margin: auto; margin-right: 1%;"
+                >connexion test</router-link
+            >
+			<router-link to="/inscription" style="margin: auto; margin-right: 1%;"
+                >inscription test</router-link
+            >
         </div>
     </div>
 	<nav class="no-link-styling">
@@ -23,8 +29,6 @@
         <router-link to="/parties">Liste des parties </router-link>
         |
         <router-link to="/characters"> Banque de perso</router-link>
-        |
-        <router-link to="/subscription">Abonnement</router-link>
         |
         <router-link to="/other"> Autres </router-link>
 

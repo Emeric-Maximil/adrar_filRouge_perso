@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "firebase": "^10.8.1",
+    "firebase": "^8.10.1",
+    "firebase-tools": "^13.4.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },

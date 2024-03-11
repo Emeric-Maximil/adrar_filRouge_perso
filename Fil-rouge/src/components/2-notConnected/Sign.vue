@@ -14,6 +14,7 @@
 
       <div id="register" class="col-6">
         <h1>Inscrivez vous</h1>
+		
 		<p><input type="text" placeholder="Email" v-model="email" /></p>
 		<p><input type="password" placeholder="Password" v-model="password" /></p>
 		<p><input
