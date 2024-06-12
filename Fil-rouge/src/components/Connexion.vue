@@ -7,20 +7,27 @@
 </template>
 
 <script setup>
+
+
 import { ref } from 'vue'
 import firebase from 'firebase'
 import { useRouter } from 'vue-router' // import router
+
+
 const email = ref('')
 const password = ref('')
 const errMsg = ref() // ERROR MESSAGE
 const router = useRouter() // get a reference to our vue router
-const signIn = () => { // we also renamed this method
+const signIn = () => { 
 	firebase
 		.auth()
-		.signInWithEmailAndPassword(email.value, password.value) // THIS LINE CHANGED
+		.signInWithEmailAndPassword(email.value, password.value) 
 		.then((data) => {
 			console.log('Successfully logged in!');
-			router.push('/') // redirect to the feed
+			// Enregistrer l'email dans le local storage
+			localStorage.setItem('userEmail', email.value);
+			console.log("enregistrement du mail dans le local storage "+ localStorage.getItem('userEmail'));
+			router.push('/') // redirect to the homepage
 		})
 		.catch(error => {
 			switch (error.code) {

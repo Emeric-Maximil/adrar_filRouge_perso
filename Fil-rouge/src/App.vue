@@ -6,13 +6,10 @@
   <div id="app">
 
     <header-component></header-component>
-
-    <div class="app" >
-      
-      <router-view />
-      
-    </div>
-
+    
+    <router-view />
+  
+    <div class="app" ></div>
 
     <footer-component></footer-component>
   

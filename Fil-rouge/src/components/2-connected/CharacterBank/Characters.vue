@@ -2,6 +2,7 @@
 	<div>
 		
 		<h1>CHARACTERS</h1>
+		<addCharacter-component></addCharacter-component>
 
 
 	</div>
@@ -9,7 +10,7 @@
 
 <script lang='js'>
 import { defineComponent } from 'vue'
-
+import AddCharacter from './AddCharacter.vue';
 import character from "./Character.vue"
 
 
@@ -17,6 +18,9 @@ import character from "./Character.vue"
 export default defineComponent({
 	name: 'Characters',
 	components: {
+		'addCharacter-component':AddCharacter,
+
+
 	},
 	props: {
 		// v-model

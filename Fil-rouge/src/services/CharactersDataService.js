@@ -1,6 +1,15 @@
-import firebase from '../firebase';
+import firebase from '../firebaseConfig';
 // ICI c'est une REF à l'endroit de notre """TABLE""" articles dans la BDD
-const db = firebase.ref("/character");
+const myDataValue = localStorage.getItem('userEmail');
+console.log(myDataValue);
+const words = myDataValue.split('.');
+let id = '';
+for (let i = 0; i < words.length; i++) {
+     id += words[i];
+}
+console.log(id);
+
+const db = firebase.ref("/"+id);
 
 class CharactersDataService {
     getAll(){

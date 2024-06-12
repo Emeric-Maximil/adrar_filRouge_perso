@@ -1,8 +1,6 @@
 <template>
 	<div>
-		
 		<h1>Error404</h1>
-
 	</div>
 </template>
 

@@ -1,5 +1,8 @@
 // router.js
 
+//pour le moment il n'y a pas de preuve qu'il est utile
+//c'est pour quoi je l'ai mis en commentaire
+/*
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -24,4 +27,4 @@ const authGuard = (to, from, next) => {
   authListener();
 };
 
-export default authGuard;
+export default authGuard;*/

@@ -1,4 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
+
 // ! la ƒ° createRouter 
 //* permet à VUE d'instancier une nouvelle instance router
 
